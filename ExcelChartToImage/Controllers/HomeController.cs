@@ -30,7 +30,7 @@ namespace ExcelChartToImage.Controllers
 
             for (int i = 0; i < imgs.Length; i++)
             {
-                //Salva arquivo em pasta do projeto
+                //Salva arquivo em uma pasta
                 imgs[i].Save(string.Format(path + "\\Images\\img-{0}.jpeg", i), ImageFormat.Jpeg);
                 //Para MemoryStream instanciado anteriormente
                 imgs[i].Save(ms, ImageFormat.Jpeg);
