@@ -1,0 +1,15 @@
+﻿@model ExcelChartToImage.Models.HomeModel
+@{
+    ViewBag.Title = "Aspose Cells Gráfico Excel para imagem";
+}
+
+<div class="row">
+    @if (Model.ListaExcelChartImg.Count > 0)
+    {
+        foreach (var img in Model.ListaExcelChartImg)
+        {
+            var imgSrc = String.Format("data:image/jpg;base64,{0}", Convert.ToBase64String(img));
+            <img src="@imgSrc" />
+        }
+    }
+</div>
